@@ -1,0 +1,147 @@
+css
+/* Configurações Gerais e Tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2D3748;
+    background-color: #F7FAFC;
+}
+
+/* Header e Menu de Navegação */
+header {
+    background-color: #0F4C81; /* Azul Esportivo */
+    color: #FFFFFF;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #E2E8F0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #F6AD55; /* Laranja contrastante para o efeito hover */
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+/* Layout Principal com Flexbox */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Responsividade: Telas maiores dividem o conteúdo em colunas */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+    
+    article {
+        flex: 3;
+    }
+    
+    aside {
+        flex: 1;
+    }
+}
+
+/* Conteúdo do Artigo */
+article section {
+    background: #FFFFFF;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #2B6CB0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+/* Listas e Citações */
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+blockquote {
+    background-color: #EBF8FF;
+    border-left: 4px solid #3182CE;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #4A5568;
+}
+
+/* Barra Lateral (Aside) */
+aside {
+    background-color: #EDF2F7;
+    padding: 2rem;
+    border-radius: 8px;
+    height: fit-content;
+    border-top: 4px solid #F6AD55;
+}
+
+/* Footer */
+footer {
+    background-color: #0F4C81;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
